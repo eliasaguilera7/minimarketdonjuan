@@ -38,7 +38,7 @@ export default function App() {
       <TopBar schedule={businessInfo.schedule} />
       <Navbar onWhatsApp={handleWhatsApp} />
       <Hero
-        logoSrc={businessInfo.logo}
+        logoSrc={`${import.meta.env.BASE_URL}${businessInfo.logo}`}
         slogan={businessInfo.slogan}
         schedule={businessInfo.schedule}
         onWhatsApp={handleWhatsApp}
