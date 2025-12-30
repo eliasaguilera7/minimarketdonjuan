@@ -14,7 +14,7 @@ export const COLORS = {
 export const businessInfo = {
   name: 'Mini Market Don Juan',
   slogan: 'Calidad y frescura en tu barrio',
-  logo: '/images/donjuanlogo2.png',
+  logo: 'images/donjuanlogo2.png',
   whatsapp: '595981965254',
   whatsappDisplay: '0981 965 254',
   address: 'Sub Oficial Mayor Ignacio R. Verá C/ Avda Ykua Karanday.',
