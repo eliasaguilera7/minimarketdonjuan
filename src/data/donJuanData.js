@@ -31,7 +31,7 @@ export const businessInfo = {
 export const promotions = [
   {
     id: 2,
-    title: '1',
+    title: 'Promocion 1',
     description: 'Promoción especial',
     price: '',
     image: 'images/promo2.jpeg',
@@ -39,7 +39,7 @@ export const promotions = [
   },
   {
     id: 3,
-    title: '2',
+    title: 'Promocion 2',
     description: 'Promoción especial',
     price: '',
     image: 'images/promo3.jpeg',
