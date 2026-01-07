@@ -16,10 +16,11 @@ export default function Footer({ name }) {
             href="https://www.facebook.com/share/1DRq2CuThK/"
             target="_blank"
             rel="noreferrer"
-            className="text-white hover:text-[#F4A900]"
+            className="text-white hover:text-[#F4A900] flex items-center gap-3"
             aria-label="Compartir en Facebook"
           >
-            <FaFacebook size={20} />
+            <FaFacebook size={60} />
+            <span className="text-white font-semibold">Minimarket Don Juan Facebook</span>
           </a>
         </div>
       </div>
