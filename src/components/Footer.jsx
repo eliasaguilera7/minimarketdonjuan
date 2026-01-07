@@ -1,3 +1,5 @@
+import { FaFacebook } from 'react-icons/fa';
+
 export default function Footer({ name }) {
   return (
     <footer className="bg-[#1B2021] text-gray-500 py-10 border-t border-[#2A3031]">
@@ -8,6 +10,17 @@ export default function Footer({ name }) {
         </div>
         <div className="text-sm">
           <p>&copy; {new Date().getFullYear()} {name}. Paraguay.</p>
+        </div>
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.facebook.com/share/1DRq2CuThK/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white hover:text-[#F4A900]"
+            aria-label="Compartir en Facebook"
+          >
+            <FaFacebook size={20} />
+          </a>
         </div>
       </div>
     </footer>

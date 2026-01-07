@@ -99,7 +99,7 @@ export default function Hero({ logoSrc, slogan, schedule, onWhatsApp, onPedidosY
             <span className="text-[#1B2021] font-bold text-xs px-2">¡OFERTAS!</span>
           </div>
           <img
-            src="images/minimercado1.png"
+            src="images/minimercado4.jpeg"
             alt="Mini Market Don Juan"
             className="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 border-4 border-white"
           />
