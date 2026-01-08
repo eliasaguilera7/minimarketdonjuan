@@ -54,6 +54,12 @@ export const updates = [
     description: 'Estamos anunciando un nuevo servicio que llegará próximamente. Mantente atento para más detalles.',
     image: 'images/anuncio1.jpeg',
   },
+  {
+    id: 2,
+    title: 'Novedad',
+    description: 'Nueva actualización disponible.',
+    image: 'images/novedad1.jpeg',
+  },
 ];
 
 export const categories = [

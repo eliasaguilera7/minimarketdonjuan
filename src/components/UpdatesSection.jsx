@@ -14,8 +14,13 @@ export default function UpdatesSection({ updates, onWhatsApp }) {
         <div className="max-w-4xl mx-auto grid gap-6">
           {updates.map((u) => (
             <div key={u.id} className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100">
-              <div className="w-full flex items-center justify-center bg-gray-50">
-                <img src={u.image} alt={u.title} className="w-auto max-h-72 object-contain" />
+              <div className="w-full bg-gray-50 aspect-[16/9] md:aspect-[21/9] p-2 md:p-3">
+                <img
+                  src={u.image}
+                  alt={u.title}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-[#1B2021] mb-2">{u.title}</h3>
