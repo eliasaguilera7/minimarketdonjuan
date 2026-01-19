@@ -32,6 +32,17 @@ export default function Hero({ logoSrc, slogan, schedule, onWhatsApp, onPedidosY
   const { startMinutes, endMinutes } = useMemo(() => parseHours(schedule), [schedule]);
   const [minutesNow, setMinutesNow] = useState(() => getAsuncionMinutesNow());
 
+  const sliderImages = [
+    `${import.meta.env.BASE_URL}images/slider1.jpeg`,
+    `${import.meta.env.BASE_URL}images/slider2.jpeg`,
+  ];
+  const [slideIdx, setSlideIdx] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setSlideIdx((i) => (i + 1) % sliderImages.length), 3000);
+    return () => clearInterval(id);
+  }, []);
+
   useEffect(() => {
     const id = setInterval(() => setMinutesNow(getAsuncionMinutesNow()), 60_000);
     return () => clearInterval(id);
@@ -98,11 +109,13 @@ export default function Hero({ logoSrc, slogan, schedule, onWhatsApp, onPedidosY
           <div className="bg-[#F4A900] rounded-full p-2 absolute -top-4 -right-4 z-20 shadow-lg animate-bounce">
             <span className="text-[#1B2021] font-bold text-xs px-2">¡OFERTAS!</span>
           </div>
-          <img
-            src="images/minimercado4.jpeg"
-            alt="Mini Market Don Juan"
-            className="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 border-4 border-white"
-          />
+          <div className="rounded-2xl shadow-2xl border-4 border-white overflow-hidden">
+            <img
+              src={sliderImages[slideIdx]}
+              alt="Mini Market Don Juan slider"
+              className="w-full h-auto object-contain"
+            />
+          </div>
           <div className="absolute inset-0 bg-linear-to-tr from-[#D12028]/20 to-transparent rounded-2xl pointer-events-none"></div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import AboutSection from './components/AboutSection';
 import CategoriesSection from './components/CategoriesSection';
 import FeaturesGrid from './components/FeaturesGrid';
@@ -33,10 +34,33 @@ export default function App() {
     window.open(businessInfo.pedidosYaUrl, '_blank');
   };
 
+  // added: top-of-page full-width slider
+  const sliderImages = [
+    `${import.meta.env.BASE_URL}images/slider1.jpeg`,
+    `${import.meta.env.BASE_URL}images/slider2.jpeg`,
+  ];
+  const [slideIdx, setSlideIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlideIdx((i) => (i + 1) % sliderImages.length), 3000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-sans text-[#1B2021]">
       <TopBar schedule={businessInfo.schedule} />
       <Navbar onWhatsApp={handleWhatsApp} />
+
+      {/* full-width banner slider (now below Navbar) */}
+      <section className="w-full bg-black">
+        <div className="max-w-none w-full">
+          <img
+            src={sliderImages[slideIdx]}
+            alt="Banner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </section>
+
       <Hero
         logoSrc={`${import.meta.env.BASE_URL}${businessInfo.logo}`}
         slogan={businessInfo.slogan}
