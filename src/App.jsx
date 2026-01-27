@@ -38,6 +38,7 @@ export default function App() {
   const sliderImages = [
     `${import.meta.env.BASE_URL}images/slider1.jpeg`,
     `${import.meta.env.BASE_URL}images/slider2.jpeg`,
+    `${import.meta.env.BASE_URL}images/minimercado4.jpeg`,
   ];
   const [slideIdx, setSlideIdx] = useState(0);
   useEffect(() => {
